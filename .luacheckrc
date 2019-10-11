@@ -1,4 +1,8 @@
 
+globals = {
+	"epic_weather"
+}
+
 read_globals = {
 	-- Stdlib
 	string = {fields = {"split"}},
@@ -10,5 +14,5 @@ read_globals = {
 	"dump", "VoxelArea",
 
 	-- deps
-	"epic"
+	"epic", "screwdriver"
 }
