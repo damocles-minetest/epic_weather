@@ -70,8 +70,8 @@ minetest.register_node("epic:set_weather", {
 
 	epic = {
     on_enter = function(_, meta, player, ctx)
-			--local weathername = meta:get_string("weathername")
-			-- TODO
+			local weathername = meta:get_string("weathername")
+			epic_weather.current_weather[player:get_player_name()] = weathername
 			ctx.next()
     end
   }

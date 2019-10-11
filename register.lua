@@ -3,8 +3,7 @@ epic_weather.weatherdefs = {} -- list<weatherdef>
 
 --[[
 weatherdef = {
-	name = "",
-	on_step = function() end
+	name = ""
 }
 --]]
 
@@ -13,5 +12,3 @@ epic_weather.register_weather = function(def)
 end
 
 epic_weather.register_weather({ name = "None" })
-
-
