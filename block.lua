@@ -27,7 +27,7 @@ local update_formspec = function(meta)
 		"")
 end
 
-minetest.register_node("epic:set_weather", {
+minetest.register_node("epic_weather:set_weather", {
 	description = "Epic set weather block",
 	tiles = {
 		"epic_node_bg.png",
