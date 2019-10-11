@@ -1,18 +1,4 @@
 
-local weatherdefs = {} -- list<weatherdef>
-
---[[
-weatherdef = {
-	name = "",
-	on_step = function() end
-}
---]]
-
-epic_weather.register_weather = function(def)
-	table.insert(weatherdefs, def)
-end
-
-epic_weather.register_weather({ name = "None" })
 
 
 local update_formspec = function(meta)
@@ -22,13 +8,13 @@ local update_formspec = function(meta)
 
 	local selected = 1
 	local list = ""
-	for i, def in ipairs(weatherdefs) do
+	for i, def in ipairs(epic_weather.weatherdefs) do
 		if def.name == weathername then
 			selected = i
 		end
 
 		list = list .. minetest.formspec_escape(def.name)
-		if i < #weatherdefs then
+		if i < #epic_weather.weatherdefs then
 			-- not end of list
 			list = list .. ","
 		end
@@ -73,7 +59,7 @@ minetest.register_node("epic:set_weather", {
 			local parts = fields.weathername:split(":")
 			if parts[1] == "CHG" then
 				local selected_def = tonumber(parts[2])
-				local weatherdef = weatherdefs[selected_def]
+				local weatherdef = epic_weather.weatherdefs[selected_def]
 				if weatherdef and weatherdef.name then
 					meta:set_string("weathername", weatherdef.name)
 				end
