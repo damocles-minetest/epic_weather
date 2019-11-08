@@ -16,7 +16,7 @@ local function do_rain(player)
 	end
 
 	minetest.add_particlespawner({
-		amount = 1000,
+		amount = 500,
 		time = 2,
 		minpos = vector.add(ppos, {x=-20, y=10, z=-20}),
 		maxpos = vector.add(ppos, {x=20, y=10, z=20}),

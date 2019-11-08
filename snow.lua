@@ -7,7 +7,7 @@ local function do_snow(player)
   local player_name = player:get_player_name()
 
   minetest.add_particlespawner({
-    amount = 1000,
+    amount = 500,
     time = 5,
     minpos = vector.add(ppos, {x=-20, y=5, z=-20}),
     maxpos = vector.add(ppos, {x=20, y=10, z=20}),
