@@ -14,5 +14,6 @@ read_globals = {
 	"dump", "VoxelArea",
 
 	-- deps
-	"epic", "screwdriver"
+	"epic", "screwdriver",
+	"lightning"
 }

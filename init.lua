@@ -7,7 +7,9 @@ epic_weather = {
 
 dofile(MP.."/register.lua")
 dofile(MP.."/block.lua")
+dofile(MP.."/light_rain.lua")
 dofile(MP.."/rain.lua")
+dofile(MP.."/thunderstorm.lua")
 dofile(MP.."/snow.lua")
 
 epic.register_hook({
