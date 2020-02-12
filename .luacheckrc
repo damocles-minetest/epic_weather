@@ -15,5 +15,6 @@ read_globals = {
 
 	-- deps
 	"epic", "screwdriver",
-	"lightning"
+	"lightning",
+	"areas"
 }
