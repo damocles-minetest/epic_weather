@@ -13,7 +13,10 @@ dofile(MP.."/thunderstorm.lua")
 dofile(MP.."/snow.lua")
 
 epic.register_hook({
-  on_epic_exit = function(playername)
+	on_epic_exit = function(playername)
+    epic_weather.current_weather[playername] = nil
+  end,
+	on_epic_abort = function(playername)
     epic_weather.current_weather[playername] = nil
   end
 })
