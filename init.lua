@@ -12,6 +12,10 @@ dofile(MP.."/rain.lua")
 dofile(MP.."/thunderstorm.lua")
 dofile(MP.."/snow.lua")
 
+local function cleanup(playername)
+  epic_weather.current_weather[playername] = nil
+end
+
 -- epic exit hook, cleanups
 epic.register_hook({
   on_epic_exit = cleanup,
